@@ -33,6 +33,10 @@ export class BasedatosService {
     return this.angularfirestore.collection("grupo6fase1").snapshotChanges();
   }
 
+  getGoleadores() {
+    return this.angularfirestore.collection("goleadores").snapshotChanges();
+  }
+
   creategrupo(grupo: any){
     return this.angularfirestore.collection("resultfutbol").add(grupo);
   }

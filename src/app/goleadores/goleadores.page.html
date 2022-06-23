@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>goleadores</ion-title>
+    <ion-title>Goleadores</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">EQUIPO</th>
+      <th scope="col">NOMBRE</th>
+      <th scope="col">GOLES</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of goleadores;let indicee=index">
+      <td data-label="#Nro">{{indicee + 1}}</td>
+      <td data-label="#Equipo">{{item.club}}</td>
+      <td data-label="#Nombre">{{item.nombre}}</td>
+      <td data-label="#cant">{{item.cant}}</td>
+    </tr>
+    </tbody>
+  </table>
 </ion-content>

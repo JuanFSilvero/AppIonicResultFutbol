@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<!--<ion-content>
   <div class="container">
     <h3>Grupo 1</h3>
     <table class="table">
@@ -46,6 +46,64 @@
       </tr>
       </tbody>
     </table>
+  </div>
+
+</ion-content>-->
+
+<!--//prueba-->
+<ion-content>
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#fase1">FASE 1</a></li>
+<!--      <li><a data-toggle="tab" href="#fase2">FASE 2</a></li>-->
+    </ul>
+    <div class="tab-content">
+      <div id="fase1" class="tab-pane fade in active">
+        <h3>Grupo A</h3>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">EQUIPO</th>
+            <th scope="col">PJ</th>
+            <th scope="col">PTS</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of grupo1;let indice=index">
+            <td data-label="#Nro">{{indice + 1}}</td>
+            <td data-label="#equipo">{{item.club}}</td>
+            <td data-label="#pj">{{item.pj}}</td>
+            <td data-label="#pt">{{item.tp}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <h3>Grupo B</h3>
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">EQUIPO</th>
+            <th scope="col">PJ</th>
+            <th scope="col">PTS</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of grupo2;let indicee=index">
+            <td data-label="#Nro">{{indicee + 1}}</td>
+            <td data-label="#equipo">{{item.club}}</td>
+            <td data-label="#pj">{{item.pj}}</td>
+            <td data-label="#pt">{{item.tp}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="fase2" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+
   </div>
 
 </ion-content>
