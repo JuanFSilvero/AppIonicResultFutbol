@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clasificación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <h3>Grupo 1</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo1;let indice=index">
+        <td data-label="#Nro">{{indice + 1}}</td>
+        <td data-label="#equipo">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <h3>Grupo 2</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo2;let indicee=index">
+        <td data-label="#Nro">{{indicee + 1}}</td>
+        <td data-label="#equipo">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</ion-content>
