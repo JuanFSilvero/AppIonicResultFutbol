@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Partidos</ion-title>
+<!--    <ion-title>Partidos</ion-title>-->
+    <img class="logoFO" src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logo-FO-transparente.png?alt=media&token=0b8a4f40-b5b6-42cf-8ee7-33a7b04f6ac6" alt="">
+
   </ion-toolbar>
 </ion-header>
 
@@ -11,43 +13,84 @@
         <ion-label>GRUPO A</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
-        <div class="container">
-          <p>Fecha 1</p>
-        <!--  <table class="table table-sm">
-            <tbody>
-            <tr>
-              <td style="width:50px;">25.06</td>
-              <td style="width:150px;" align="center">12 de Junio</td>
-              <td style="width:30px;" align="center">1</td>
-              <td style="width:30px;" align="center">0</td>
-              <td style="width:150px;" align="center">Ovetense</td>
-            </tr>
-            <tr>
-              <td style="width:50px;">25.06</td>
-              <td style="width:150px;" align="center">12 de Junio</td>
-              <td style="width:30px;" align="center">1</td>
-              <td style="width:30px;" align="center">0</td>
-              <td style="width:150px;" align="center">Ovetense</td>
-            </tr>
-            </tbody>
-          </table>-->
-          <table class="table table-sm">
-            <tbody>
-            <tr *ngFor="let item of grupo1fecha1fase1">
-              <td style="width:50px;">{{item.fecha}}</td>
-              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
+        <p><strong>Fecha 1</strong></p>
+        <table class="table table-sm">
+          <tbody>
+          <tr *ngFor="let item of grupo1fecha1fase1">
+            <td style="width:50px;">{{item.fecha}}</td>
+            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p><strong>Fecha 2</strong></p>
+        <table class="table table-sm">
+          <tbody>
+          <tr *ngFor="let item of grupo1fecha2fase1">
+            <td style="width:50px;">{{item.fecha}}</td>
+            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p><strong>Fecha 3</strong></p>
+        <table class="table table-sm">
+          <tbody>
+          <tr *ngFor="let item of grupo1fecha3fase1">
+            <td style="width:50px;">{{item.fecha}}</td>
+            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p><strong>Fecha 4</strong></p>
+        <table class="table table-sm">
+          <tbody>
+          <tr *ngFor="let item of grupo1fecha4fase1">
+            <td style="width:50px;">{{item.fecha}}</td>
+            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p><strong>Fecha 5</strong></p>
+        <table class="table table-sm">
+          <tbody>
+          <tr *ngFor="let item of grupo1fecha5fase1">
+            <td style="width:50px;">{{item.fecha}}</td>
+            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <p><strong>Fecha 6</strong></p>
+        <table class="table table-sm">
+          <tbody>
+          <tr *ngFor="let item of grupo1fecha6fase1">
+            <td style="width:50px;">{{item.fecha}}</td>
+            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
+
     </ion-accordion>
     <ion-accordion value="second">
       <ion-item slot="header" color="light">
-        <ion-label>Second Accordion</ion-label>
+        <ion-label>GRUPO B</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         Second Content
@@ -55,7 +98,31 @@
     </ion-accordion>
     <ion-accordion value="third">
       <ion-item slot="header" color="light">
-        <ion-label>Third Accordion</ion-label>
+        <ion-label>GRUPO C</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Third Content
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth">
+      <ion-item slot="header" color="light">
+        <ion-label>GRUPO D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Third Content
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fifth">
+      <ion-item slot="header" color="light">
+        <ion-label>GRUPO E</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Third Content
+      </div>
+    </ion-accordion>
+    <ion-accordion value="sixth">
+      <ion-item slot="header" color="light">
+        <ion-label>GRUPO F</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         Third Content

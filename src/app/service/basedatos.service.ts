@@ -35,8 +35,29 @@ export class BasedatosService {
   }
 
   //Partidos Fase1
+  //Grupo 1
   getGrupo1fecha1fase1() {
     return this.angularfirestore.collection("grupo1fecha1fase1").snapshotChanges();
+  }
+
+  getGrupo1fecha2fase1() {
+    return this.angularfirestore.collection("grupo1fecha2fase1").snapshotChanges();
+  }
+
+  getGrupo1fecha3fase1() {
+    return this.angularfirestore.collection("grupo1fecha3fase1").snapshotChanges();
+  }
+
+  getGrupo1fecha4fase1() {
+    return this.angularfirestore.collection("grupo1fecha4fase1").snapshotChanges();
+  }
+
+  getGrupo1fecha5fase1() {
+    return this.angularfirestore.collection("grupo1fecha5fase1").snapshotChanges();
+  }
+
+  getGrupo1fecha6fase1() {
+    return this.angularfirestore.collection("grupo1fecha6fase1").snapshotChanges();
   }
 
 
