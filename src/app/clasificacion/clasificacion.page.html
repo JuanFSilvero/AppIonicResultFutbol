@@ -2,6 +2,25 @@
   <ion-toolbar>
     <ion-title>Clasificación</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment scrollable color="danger" value="segment1" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="segment1">
+        <ion-label>Fase 1</ion-label>
+      </ion-segment-button>
+      <ion-segment-button disabled value="segment2">
+        <ion-label>Fase 2</ion-label>
+      </ion-segment-button>
+      <ion-segment-button disabled value="segment3">
+        <ion-label>Fase 3</ion-label>
+      </ion-segment-button>
+      <!--<ion-segment-button value="segment4">
+        <ion-label>Fase 4</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="segment5">
+        <ion-label>Fase 5</ion-label>
+      </ion-segment-button>-->
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <!--<ion-content>
@@ -51,11 +70,15 @@
 </ion-content>-->
 
 <!--//prueba-->
-<ion-content>
+<!--<ion-content>
+  <br>
   <div class="container">
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#fase1">FASE 1</a></li>
-<!--      <li><a data-toggle="tab" href="#fase2">FASE 2</a></li>-->
+      <li><a data-toggle="tab" href="#fase2">FASE 2</a></li>
+      <li><a data-toggle="tab" href="#fase2">FASE 3</a></li>
+      <li><a data-toggle="tab" href="#fase2">FASE 4</a></li>
+      <li><a data-toggle="tab" href="#fase2">FASE 5</a></li>
     </ul>
     <div class="tab-content">
       <div id="fase1" class="tab-pane fade in active">
@@ -72,7 +95,12 @@
           <tbody>
           <tr *ngFor="let item of grupo1;let indice=index">
             <td data-label="#Nro">{{indice + 1}}</td>
-            <td data-label="#equipo">{{item.club}}</td>
+            <td data-label="#equipo">
+              <img align="center" class="imagen" width="28" height="25"
+                   src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/equipo1.png?alt=media&token=84e097e6-91b6-4fc2-a4f8-8f7a774a6071"
+                   alt="">{{item.club}}
+            </td>
+
             <td data-label="#pj">{{item.pj}}</td>
             <td data-label="#pt">{{item.tp}}</td>
           </tr>
@@ -100,10 +128,169 @@
       </div>
       <div id="fase2" class="tab-pane fade">
         <h3>Menu 1</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
       </div>
     </div>
 
   </div>
 
+</ion-content>-->
+<ion-content>
+  <div *ngIf="selectedSegment == 'segment1'">
+    <ion-item>
+      <ion-label>
+        GRUPO A
+      </ion-label>
+    </ion-item>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo1;let indice=index">
+        <td data-label="#Nro">{{indice + 1}}</td>
+        <td data-label="#equipo">
+          <img align="center" class="imagen" width="28" height="25"
+               src="{{item.foto}}"
+               alt="">{{item.club}}
+        </td>
+
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <ion-item>
+      <ion-label>
+        GRUPO B
+      </ion-label>
+    </ion-item>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo2;let indicee=index">
+        <td data-label="#Nro">{{indicee + 1}}</td>
+        <td data-label="#equipo"><img align="center" class="imagen" width="28" height="25"
+                                      src="{{item.foto}}"
+                                      alt="">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <ion-item>
+      <ion-label>
+        GRUPO C
+      </ion-label>
+    </ion-item>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo3;let indicee=index">
+        <td data-label="#Nro">{{indicee + 1}}</td>
+        <td data-label="#equipo"><img align="center" class="imagen" width="28" height="25"
+                                      src="{{item.foto}}"
+                                      alt="">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <ion-item>
+      <ion-label>
+        GRUPO D
+      </ion-label>
+    </ion-item>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo4;let indicee=index">
+        <td data-label="#Nro">{{indicee + 1}}</td>
+        <td data-label="#equipo"><img align="center" class="imagen" width="28" height="25"
+                                      src="{{item.foto}}"
+                                      alt="">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <ion-item>
+      <ion-label>
+        GRUPO E
+      </ion-label>
+    </ion-item>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo5;let indicee=index">
+        <td data-label="#Nro">{{indicee + 1}}</td>
+        <td data-label="#equipo"><img align="center" class="imagen" width="28" height="25"
+                                      src="{{item.foto}}"
+                                      alt="">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <ion-item>
+      <ion-label>
+        GRUPO F
+      </ion-label>
+    </ion-item>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">EQUIPO</th>
+        <th scope="col">PJ</th>
+        <th scope="col">PTS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of grupo6;let indicee=index">
+        <td data-label="#Nro">{{indicee + 1}}</td>
+        <td data-label="#equipo"><img align="center" class="imagen" width="28" height="25"
+                                      src="{{item.foto}}"
+                                      alt="">{{item.club}}</td>
+        <td data-label="#pj">{{item.pj}}</td>
+        <td data-label="#pt">{{item.tp}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
 </ion-content>

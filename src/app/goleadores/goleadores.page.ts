@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BasedatosService} from "../service/basedatos.service";
 
 @Component({
@@ -10,7 +10,9 @@ export class GoleadoresPage implements OnInit {
 
   goleador: any;
   goleadores: any[] = [];
-  constructor( private firestoreService: BasedatosService) { }
+
+  constructor(private firestoreService: BasedatosService) {
+  }
 
   ngOnInit() {
     this.goleador = {

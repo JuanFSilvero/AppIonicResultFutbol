@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "180382591743",
+    "project_id": "resultadosfutbol-46674",
+    "storage_bucket": "resultadosfutbol-46674.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180382591743:android:935725dca618bd955d7aca",
+        "android_client_info": {
+          "package_name": "com.futbolovetense.nacionalb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180382591743-9nkvsphbo6qcochgkpqn20jqeo6gqkhk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBqryi0XktXOVdrA6PUliZNnc91KpQgmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180382591743-9nkvsphbo6qcochgkpqn20jqeo6gqkhk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

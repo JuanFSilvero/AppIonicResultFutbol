@@ -9,6 +9,7 @@ export class BasedatosService {
   constructor(public angularfirestore: AngularFirestore) {
   }
 
+  //Clasificacion Fase1
   getGrupo1fase1() {
     return this.angularfirestore.collection("grupo1fase1").snapshotChanges();
   }
@@ -32,6 +33,13 @@ export class BasedatosService {
   getGrupo6fase1() {
     return this.angularfirestore.collection("grupo6fase1").snapshotChanges();
   }
+
+  //Partidos Fase1
+  getGrupo1fecha1fase1() {
+    return this.angularfirestore.collection("grupo1fecha1fase1").snapshotChanges();
+  }
+
+
 
   getGoleadores() {
     return this.angularfirestore.collection("goleadores").snapshotChanges();

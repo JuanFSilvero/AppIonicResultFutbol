@@ -5,116 +5,62 @@
 </ion-header>
 
 <ion-content>
-  <div class="accordion" id="accordionExample">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h2 class="mb-0">
-          <button class="btn btn-light btn-block text-left" type="button" data-toggle="collapse"
-                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            GRUPO A
-          </button>
-        </h2>
-      </div>
-
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body">
-          <div class="container">
-            <p>Fecha 1</p>
-            <table class="table table-sm">
-              <thead>
-              <!--<tr align="center">
-                <th scope="col">Fecha</th>
-                <th scope="col">Equipos</th>
-                <th scope="col">Result</th>
-              </tr>-->
-              </thead>
-              <tbody>
-              <tr>
-                <td rowspan="2">22.07</td>
-                <td>San Alberto</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>12 de Junio</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td rowspan="2">22.07</td>
-                <td>Carapegua</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>1° de Marzo</td>
-                <td>-</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>GRUPO A</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <div class="container">
+          <p>Fecha 1</p>
+        <!--  <table class="table table-sm">
+            <tbody>
+            <tr>
+              <td style="width:50px;">25.06</td>
+              <td style="width:150px;" align="center">12 de Junio</td>
+              <td style="width:30px;" align="center">1</td>
+              <td style="width:30px;" align="center">0</td>
+              <td style="width:150px;" align="center">Ovetense</td>
+            </tr>
+            <tr>
+              <td style="width:50px;">25.06</td>
+              <td style="width:150px;" align="center">12 de Junio</td>
+              <td style="width:30px;" align="center">1</td>
+              <td style="width:30px;" align="center">0</td>
+              <td style="width:150px;" align="center">Ovetense</td>
+            </tr>
+            </tbody>
+          </table>-->
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            GRUPO B
-          </button>
-        </h2>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Second Content
       </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-          <div class="container">
-            <p>Fecha 1</p>
-            <table class="table table-sm">
-              <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Third Content
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn btn-light btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            GRUPO C
-          </button>
-        </h2>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="card-body">
-          And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
-        </div>
-      </div>
-    </div>
-  </div>
+    </ion-accordion>
+  </ion-accordion-group>
 
 </ion-content>
