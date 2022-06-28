@@ -1,11 +1,12 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: "AIzaSyCedMCeYgTGabS0vZckPuz-GUg0JwqBHTI",
+    authDomain: "resultadosfutbol-46674.firebaseapp.com",
+    projectId: "resultadosfutbol-46674",
+    storageBucket: "resultadosfutbol-46674.appspot.com",
+    messagingSenderId: "180382591743",
+    appId: "1:180382591743:web:8774d23b35a03f1f5d7aca",
+    measurementId: "G-NE38N602MJ"
   }
 };

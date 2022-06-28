@@ -7,7 +7,7 @@ import {BasedatosService} from "../service/basedatos.service";
   styleUrls: ['./clasificacion.page.scss'],
 })
 export class ClasificacionPage implements OnInit {
-  private selectedSegment: string='segment1';
+  selectedSegment: string='segment1';
   segment1: boolean = true;
   segment2: boolean = false;
   segment3: boolean = false;
