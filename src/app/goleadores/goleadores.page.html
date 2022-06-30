@@ -1,11 +1,17 @@
 <ion-header>
   <ion-toolbar>
-<!--    <ion-title>Goleadores</ion-title>-->
-    <img class="logoFO" src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logo-FO-transparente.png?alt=media&token=0b8a4f40-b5b6-42cf-8ee7-33a7b04f6ac6" alt="">
+    <!--    <ion-title>Clasificación</ion-title>-->
+    <div class="d-flex">
+      <div class="p-2"><img class="logoFO"
+                            src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logofutbolovetense.jpeg?alt=media&token=b429e185-9113-4c32-9904-38112944ddb9"></div>
+      <div class="ml-auto p-2"><img class="logoNacionalB"
+                                    src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/nacionalblogo.svg?alt=media&token=950dda2f-fb5e-441e-91cb-fd950947d331"></div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div id="fondo">
   <table class="table">
     <thead>
     <tr>
@@ -18,10 +24,13 @@
     <tbody>
     <tr *ngFor="let item of goleadores;let indicee=index">
       <td data-label="#Nro">{{indicee + 1}}</td>
-      <td data-label="#Equipo">{{item.club}}</td>
+      <td data-label="#Equipo"><img align="center" class="imagen" width="28" height="25"
+                                    src="{{item.foto}}"
+                                    alt="">{{item.club}}</td>
       <td data-label="#Nombre">{{item.nombre}}</td>
       <td data-label="#cant">{{item.cant}}</td>
     </tr>
     </tbody>
   </table>
+  </div>
 </ion-content>

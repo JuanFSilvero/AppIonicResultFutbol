@@ -2,3 +2,28 @@
   width: 150px;
   height: 70px;
 }
+
+.logoNacionalB {
+  width: 200px;
+  height: 70px;
+}
+
+#fondo::before {
+  //background-image: url("https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logoFO-transparente.PNG?alt=media&token=7adcd5e1-9d01-4690-b942-52573fd86afb");
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  //top: 10%;
+  //left: 10%;
+  z-index: -1;
+  background: url("https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logoFO-transparenteee.PNG?alt=media&token=4e3726dd-3991-4bee-8388-3ff5fd4d71ee") repeat-y;
+  //transform: rotate(-5deg);
+  //margin-left: 100px;
+  background-position: center;
+}
+
+#fondo {
+  position: relative;
+  overflow: hidden;
+}

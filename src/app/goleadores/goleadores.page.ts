@@ -18,7 +18,8 @@ export class GoleadoresPage implements OnInit {
     this.goleador = {
       cant: 0,
       club: '',
-      nombre: ''
+      nombre: '',
+      foto: ''
     };
     this.obtenerdatos();
   }
@@ -31,6 +32,7 @@ export class GoleadoresPage implements OnInit {
           cant: e.payload.doc.data().cant,
           club: e.payload.doc.data().club,
           nombre: e.payload.doc.data().nombre,
+          foto: e.payload.doc.data().foto,
           idFirebase: e.payload.doc.id
         };
       })

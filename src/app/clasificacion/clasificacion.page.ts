@@ -32,7 +32,13 @@ export class ClasificacionPage implements OnInit {
       club: "",
       pj: 0,
       tp: 0,
-      foto:""
+      foto:"",
+      pg:0,
+      pe:0,
+      pp:0,
+      gf:0,
+      gc:0,
+      dif:0
     }
 
     this.obtenerdatosGrupo1Fase1();
@@ -53,6 +59,12 @@ export class ClasificacionPage implements OnInit {
           pj: e.payload.doc.data().pj,
           tp: e.payload.doc.data().tp,
           foto: e.payload.doc.data().foto,
+          pg: e.payload.doc.data().pg,
+          pe: e.payload.doc.data().pe,
+          pp: e.payload.doc.data().pp,
+          gf: e.payload.doc.data().gf,
+          gc: e.payload.doc.data().gc,
+          dif: e.payload.doc.data().dif,
           idFirebase: e.payload.doc.id
         }
       })
@@ -73,6 +85,12 @@ export class ClasificacionPage implements OnInit {
           pj: e.payload.doc.data().pj,
           tp: e.payload.doc.data().tp,
           foto: e.payload.doc.data().foto,
+          pg: e.payload.doc.data().pg,
+          pe: e.payload.doc.data().pe,
+          pp: e.payload.doc.data().pp,
+          gf: e.payload.doc.data().gf,
+          gc: e.payload.doc.data().gc,
+          dif: e.payload.doc.data().dif,
           idFirebase: e.payload.doc.id
         }
       })
@@ -90,6 +108,12 @@ export class ClasificacionPage implements OnInit {
           pj: e.payload.doc.data().pj,
           tp: e.payload.doc.data().tp,
           foto: e.payload.doc.data().foto,
+          pg: e.payload.doc.data().pg,
+          pe: e.payload.doc.data().pe,
+          pp: e.payload.doc.data().pp,
+          gf: e.payload.doc.data().gf,
+          gc: e.payload.doc.data().gc,
+          dif: e.payload.doc.data().dif,
           idFirebase: e.payload.doc.id
         }
       })
@@ -107,6 +131,12 @@ export class ClasificacionPage implements OnInit {
           pj: e.payload.doc.data().pj,
           tp: e.payload.doc.data().tp,
           foto: e.payload.doc.data().foto,
+          pg: e.payload.doc.data().pg,
+          pe: e.payload.doc.data().pe,
+          pp: e.payload.doc.data().pp,
+          gf: e.payload.doc.data().gf,
+          gc: e.payload.doc.data().gc,
+          dif: e.payload.doc.data().dif,
           idFirebase: e.payload.doc.id
         }
       })
@@ -124,6 +154,12 @@ export class ClasificacionPage implements OnInit {
           pj: e.payload.doc.data().pj,
           tp: e.payload.doc.data().tp,
           foto: e.payload.doc.data().foto,
+          pg: e.payload.doc.data().pg,
+          pe: e.payload.doc.data().pe,
+          pp: e.payload.doc.data().pp,
+          gf: e.payload.doc.data().gf,
+          gc: e.payload.doc.data().gc,
+          dif: e.payload.doc.data().dif,
           idFirebase: e.payload.doc.id
         }
       })
@@ -141,6 +177,12 @@ export class ClasificacionPage implements OnInit {
           pj: e.payload.doc.data().pj,
           tp: e.payload.doc.data().tp,
           foto: e.payload.doc.data().foto,
+          pg: e.payload.doc.data().pg,
+          pe: e.payload.doc.data().pe,
+          pp: e.payload.doc.data().pp,
+          gf: e.payload.doc.data().gf,
+          gc: e.payload.doc.data().gc,
+          dif: e.payload.doc.data().dif,
           idFirebase: e.payload.doc.id
         }
       })

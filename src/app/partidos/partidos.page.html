@@ -1,133 +1,494 @@
 <ion-header>
   <ion-toolbar>
-<!--    <ion-title>Partidos</ion-title>-->
-    <img class="logoFO" src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logo-FO-transparente.png?alt=media&token=0b8a4f40-b5b6-42cf-8ee7-33a7b04f6ac6" alt="">
-
+    <!--    <ion-title>Clasificación</ion-title>-->
+    <div class="d-flex">
+      <div class="p-2"><img class="logoFO"
+                            src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logofutbolovetense.jpeg?alt=media&token=b429e185-9113-4c32-9904-38112944ddb9"></div>
+      <div class="ml-auto p-2"><img class="logoNacionalB"
+                                    src="https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/nacionalblogo.svg?alt=media&token=950dda2f-fb5e-441e-91cb-fd950947d331"></div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   <ion-accordion-group>
-    <ion-accordion value="first">
-      <ion-item slot="header" color="light">
-        <ion-label>GRUPO A</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        <p><strong>Fecha 1</strong></p>
-        <table class="table table-sm">
-          <tbody>
-          <tr *ngFor="let item of grupo1fecha1fase1">
-            <td style="width:50px;">{{item.fecha}}</td>
-            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <p><strong>Fecha 2</strong></p>
-        <table class="table table-sm">
-          <tbody>
-          <tr *ngFor="let item of grupo1fecha2fase1">
-            <td style="width:50px;">{{item.fecha}}</td>
-            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <p><strong>Fecha 3</strong></p>
-        <table class="table table-sm">
-          <tbody>
-          <tr *ngFor="let item of grupo1fecha3fase1">
-            <td style="width:50px;">{{item.fecha}}</td>
-            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <p><strong>Fecha 4</strong></p>
-        <table class="table table-sm">
-          <tbody>
-          <tr *ngFor="let item of grupo1fecha4fase1">
-            <td style="width:50px;">{{item.fecha}}</td>
-            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <p><strong>Fecha 5</strong></p>
-        <table class="table table-sm">
-          <tbody>
-          <tr *ngFor="let item of grupo1fecha5fase1">
-            <td style="width:50px;">{{item.fecha}}</td>
-            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-          </tr>
-          </tbody>
-        </table>
-        <p><strong>Fecha 6</strong></p>
-        <table class="table table-sm">
-          <tbody>
-          <tr *ngFor="let item of grupo1fecha6fase1">
-            <td style="width:50px;">{{item.fecha}}</td>
-            <td style="width:150px;" align="center">{{item.equipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
-            <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-            <td style="width:150px;" align="center">{{item.equipovisita}}</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
+    <div>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>GRUPO A</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content" id="fondo">
+          <p><strong>Fecha 1</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 2</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha2fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 3</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha3fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 4</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha4fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 5</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha5fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 6</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo1fecha6fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
 
-    </ion-accordion>
-    <ion-accordion value="second">
-      <ion-item slot="header" color="light">
-        <ion-label>GRUPO B</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Second Content
-      </div>
-    </ion-accordion>
-    <ion-accordion value="third">
-      <ion-item slot="header" color="light">
-        <ion-label>GRUPO C</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Third Content
-      </div>
-    </ion-accordion>
-    <ion-accordion value="fourth">
-      <ion-item slot="header" color="light">
-        <ion-label>GRUPO D</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Third Content
-      </div>
-    </ion-accordion>
-    <ion-accordion value="fifth">
-      <ion-item slot="header" color="light">
-        <ion-label>GRUPO E</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Third Content
-      </div>
-    </ion-accordion>
-    <ion-accordion value="sixth">
-      <ion-item slot="header" color="light">
-        <ion-label>GRUPO F</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Third Content
-      </div>
-    </ion-accordion>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>GRUPO B</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p><strong>Fecha 1</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo2fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 2</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo2fecha2fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 3</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo2fecha3fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 4</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo2fecha4fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 5</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo2fecha5fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 6</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo2fecha6fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>GRUPO C</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p><strong>Fecha 1</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo3fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 2</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo3fecha2fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 3</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo3fecha3fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 4</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo3fecha4fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 5</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo3fecha5fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 6</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo3fecha6fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="fourth">
+        <ion-item slot="header" color="light">
+          <ion-label>GRUPO D</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p><strong>Fecha 1</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo4fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 2</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo4fecha2fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 3</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo4fecha3fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 4</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo4fecha4fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 5</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo4fecha5fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 6</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo4fecha6fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="fifth">
+        <ion-item slot="header" color="light">
+          <ion-label>GRUPO E</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p><strong>Fecha 1</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo5fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 2</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo5fecha2fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 3</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo5fecha3fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 4</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo5fecha4fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 5</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo5fecha5fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 6</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo5fecha6fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="sixth">
+        <ion-item slot="header" color="light">
+          <ion-label>GRUPO F</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p><strong>Fecha 1</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo6fecha1fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 2</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo6fecha2fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 3</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo6fecha3fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 4</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo6fecha4fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 5</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo6fecha5fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+          <p><strong>Fecha 6</strong></p>
+          <table class="table table-sm">
+            <tbody>
+            <tr *ngFor="let item of grupo6fecha6fase1">
+              <td style="width:50px;">{{item.fecha}}</td>
+              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
+              <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </ion-accordion>
+    </div>
   </ion-accordion-group>
-
 </ion-content>
