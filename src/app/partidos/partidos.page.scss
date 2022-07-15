@@ -8,6 +8,18 @@
   height: 70px;
 }
 
+.imagen {
+  margin: 0px;
+  margin-right: 5px;
+  align-content: center;
+}
+
+.imagen2 {
+  margin: 0px;
+  margin-left: 5px;
+  align-content: center;
+}
+
 #fondo::before {
   //background-image: url("https://firebasestorage.googleapis.com/v0/b/resultadosfutbol-46674.appspot.com/o/logoFO-transparente.PNG?alt=media&token=7adcd5e1-9d01-4690-b942-52573fd86afb");
   content: "";

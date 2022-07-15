@@ -24,10 +24,13 @@
             <tbody>
             <tr *ngFor="let item of grupo1fecha1fase1">
               <td style="width:50px;">{{item.fecha}}</td>
-              <td style="width:150px;" align="center">{{item.equipolocal}}</td>
+              <td style="width:150px;" align="center"><img align="center" class="imagen" width="28" height="25"
+                                                           src="{{item.logoel}}"
+                                                           alt="">{{item.equipolocal}}</td>
               <td style="width:30px;" align="center">{{item.golesequipolocal}}</td>
               <td style="width:30px;" align="center">{{item.golesequipovisita}}</td>
-              <td style="width:150px;" align="center">{{item.equipovisita}}</td>
+              <td style="width:150px;" align="center">{{item.equipovisita}}<img align="center" class="imagen2" width="28" height="25"
+                                                                                src="{{item.logoev}}"></td>
             </tr>
             </tbody>
           </table>

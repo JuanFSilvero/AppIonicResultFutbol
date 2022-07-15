@@ -54,7 +54,9 @@ export class PartidosPage implements OnInit {
       equipovisita: "",
       fecha: "",
       golesequipolocal: "",
-      golesequipovisita: ""
+      golesequipovisita: "",
+      logoel:"",
+      logoev:""
     }
 
     this.obtenerdatosGrupo1Fecha1Fase1();
@@ -107,6 +109,8 @@ export class PartidosPage implements OnInit {
           fecha: e.payload.doc.data().fecha,
           golesequipolocal: e.payload.doc.data().golesequipolocal,
           golesequipovisita: e.payload.doc.data().golesequipovisita,
+          logoel: e.payload.doc.data().logoel,
+          logoev: e.payload.doc.data().logoev,
           idFirebase: e.payload.doc.id
         }
       })
