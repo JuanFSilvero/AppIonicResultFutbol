@@ -15,6 +15,7 @@ import {AngularFireMessagingModule} from "@angular/fire/compat/messaging";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 import {getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService} from "@angular/fire/analytics";
 import {getAuth, provideAuth} from "@angular/fire/auth";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,7 +36,9 @@ import {getAuth, provideAuth} from "@angular/fire/auth";
 
   ],
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, ScreenTrackingService,
-    UserTrackingService],
+    UserTrackingService,
+    /*{provide: LocationStrategy, useClass: HashLocationStrategy}*/
+    ],
   bootstrap: [AppComponent],
 })
 export class AppModule {

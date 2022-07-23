@@ -3,8 +3,8 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
 
+  compileSdkVersion 30
   buildToolsVersion '30.0.3'
-  compileSdk compileSdkVersion
   defaultConfig {
         applicationId "com.futbolovetense.nacionalb"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -27,9 +27,9 @@ android {
 }
 
 repositories {
-    flatDir{
+    /*flatDir{
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
-    }
+    }*/
 }
 
 dependencies {
